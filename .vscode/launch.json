@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {   "name": "G474",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/build/PER-FDCAN-Testing.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "svdFile": "${workspaceRoot}/STM32G474xx.svd",
+            "configFiles": [
+                "stlink.cfg"
+            ],
+            "runToEntryPoint": "main",
+            "liveWatch": {
+                "enabled":true,
+                "samplesPerSecond":5
+            },
+            "preLaunchTask": "rebuild"
+        }
+    ]
+}
